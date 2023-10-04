@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const Hero = () => {
   return (
-    <main id="hero" className="w-screen h-[90vh] md:h-screen bg-bg-hero-mobile md:bg-bg-hero-desktop bg-no-repeat bg-right-bottom bg-auto bg-rsn-green-600">
+    <main id="hero" className="w-full max-w-[100vw] h-[90vh] bg-bg-hero-mobile md:bg-bg-hero-desktop bg-no-repeat bg-right-bottom bg-mind bg-rsn-green-600">
       <div className="w-full h-full flex flex-col justify-center items-center">
         <div className="w-full flex justify-center items-center">
           <Image

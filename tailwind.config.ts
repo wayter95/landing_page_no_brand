@@ -20,6 +20,9 @@ const config: Config = {
         'bg-hero-desktop': "url('/images/bg-hero-desktop.png')",
         'bg-hero-mobile': "url('/images/bg-hero-mobile.png')",
       }),
+      backgroundSize: {
+        'mind': '90%',
+      }
     },
   },
   plugins: [],

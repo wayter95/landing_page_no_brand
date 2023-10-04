@@ -20,7 +20,16 @@ const Button = ({ title, variant, ...rest }: IButtonProps) => {
       {
         variant === 'secondary' &&
         <button
-        className="w-full bg-rsn-orange-600 text-rsn-beige-300 text-base font-bold p-4 hover:opacity-80 transition duration-200"
+          className="w-full bg-rsn-orange-600 text-rsn-beige-300 text-base font-bold p-4 hover:opacity-80 transition duration-200"
+          {...rest}
+        >
+          {title}
+        </button>
+      }
+      {
+        variant === 'tertiary' &&
+        <button
+          className="w-fit bg-transparent border-2 border-rsn-green-600 text-rsn-green-600 text-base font-bold p-4 hover:opacity-80 transition duration-200"
           {...rest}
         >
           {title}
