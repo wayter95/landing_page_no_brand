@@ -5,7 +5,7 @@ import Image from "next/image"
 const About = () => {
   return (
     <section id="about" className="">
-      <div className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2">
+      <div className="grid md:grid-rows-none md:grid-cols-2 gap-y-4 md:gap-y-0">
         <div className="flex w-full max-w-[90%] md:max-w-[60%] mx-auto h-full flex-col justify-center gap-4 py-8 md:py-20">
           <div className="md:pl-8">
             <Heading text="ABOUT" />
@@ -24,7 +24,7 @@ const About = () => {
               This versatile meetings and events space is the ideal venue in Werribee to host meetings, conferences, cocktail parties, celebratory events.
             </p>
           </div>
-          <div className="md:pl-8 mt-4 md:mt-8">
+          <div className="md:pl-8 mt-4 md:mt-8 max-w-[50%]">
             <Button title="BOOK A TABLE" variant="tertiary" />
           </div>
         </div>
