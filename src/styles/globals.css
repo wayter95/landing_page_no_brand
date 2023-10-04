@@ -7,22 +7,42 @@ body {
   background: #F3E4D2;
 }
 
-.bg-mind {
+.bg-eat {
   position: relative;
 }
-.bg-mind::before {
+
+.bg-eat::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 30%;
+  width: 40%;
+  height: 100%;
+  background-color: #E7CDA9;
+  z-index: -1;
+}
+
+.bg-drink {
+  position: relative;
+}
+
+.bg-drink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
   height: 100%;
   background-color: #E7CDA9;
   z-index: -1;
 }
 
 @media screen and (min-width: 768px) {
-  .bg-mind::before {
-    width: 70%;
+  .bg-eat::before {
+    width: 60%;
+  }
+
+  .bg-drink::before {
+    width: 60%;
   }
 }

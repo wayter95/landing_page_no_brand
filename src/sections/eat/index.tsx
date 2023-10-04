@@ -6,11 +6,11 @@ const Eat = () => {
   return (
     <section id="eat" className="mt-20">
       <div className="grid md:grid-rows-none md:grid-cols-2 gap-y-4 md:gap-y-0">
-        <div className="bg-mind flex w-full h-fit md:h-full mx-auto items-center justify-center py-8 md:py-20 order-2 md:order-1">
+        <div className="bg-eat flex w-full h-fit md:h-full mx-auto items-center justify-center py-8 md:py-20 order-2 md:order-1">
           <div className="w-[10%] md:w-[5%] flex justify-center items-center">
             <span className="inline-block transform -rotate-90 whitespace-nowrap text-xl md:text-6xl text-rsn-green-600">Stay & chat</span>
           </div>
-          <div className="w-[80%] flex justify-center items-center">
+          <div className="w-[70%] flex justify-center items-center">
             <Image
               src="/images/eat-image.png"
               alt="About"
