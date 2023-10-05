@@ -1,4 +1,5 @@
 import { About } from "@/sections/about";
+import { Contact } from "@/sections/contact";
 import { Drink } from "@/sections/drinks";
 import { Eat } from "@/sections/eat";
 import { BookFunctions } from "@/sections/functions";
@@ -12,6 +13,7 @@ export default function Home() {
       <Eat />
       <Drink />
       <BookFunctions />
+      <Contact />
     </>
   )
 }

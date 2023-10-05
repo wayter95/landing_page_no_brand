@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const BookFunctions = () => {
   return (
-    <section id="book-functions" className="mt-20 mb-20">
+    <section id="book-functions" className="mt-20">
       <div className="flex w-full gap-4 justify-between items-center py-12 md:py-0 md:max-w-[80%] mx-auto bg-rsn-beige-500">
         <div className="w-[60%] hidden md:block">
           <Image

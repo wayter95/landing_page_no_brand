@@ -19,9 +19,14 @@ const config: Config = {
       backgroundImage: theme => ({
         'bg-hero-desktop': "url('/images/bg-hero-desktop.png')",
         'bg-hero-mobile': "url('/images/bg-hero-mobile.png')",
+        'bg-contact-desktop': "url('/images/bg-contact-desktop.png')",
+        'bg-contact-mobile': "url('/images/bg-contact-mobile.png')",
       }),
       backgroundSize: {
         'mind': '90%',
+      },
+      backgroundPosition: {
+        'left-top-20': 'left top 5rem'
       }
     },
   },
