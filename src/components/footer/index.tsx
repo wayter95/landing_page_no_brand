@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full text-center mb-8 mt-4">
+      <div className="w-full text-center mb-8 mt-4 md:mt-0">
         <span className="p-8">All rights reserved © Rosana Bistro + Bar  |  Website by <Link href="https://www.talkagency.com.au/" target="_blank">TALK Agency</Link></span>
       </div>
     </footer>
