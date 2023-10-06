@@ -37,6 +37,38 @@ body {
   z-index: -1;
 }
 
+.btn-menu div {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.btn-menu div:nth-child(2) {
+  width: 30px;
+}
+
+.btn-menu.active div {
+  background: #255137;
+}
+
+
+.btn-menu.active div:first-child {
+  transform: rotate(135deg);
+}
+
+.btn-menu.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.btn-menu.active div:last-child {
+  transform: rotate(-135deg);
+  top: -13px;
+}
+
 @media screen and (min-width: 768px) {
   .bg-eat::before {
     width: 60%;
@@ -45,4 +77,12 @@ body {
   .bg-drink::before {
     width: 60%;
   }
+}
+
+.nav-list-active {
+  clip-path: circle(1500px at 90% -20%);
+}
+
+.nav-list-inactive {
+  clip-path: circle(100px at 90% -20%);
 }

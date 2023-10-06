@@ -71,7 +71,7 @@ const Footer = () => {
                       <li key={link.title} >
                         <button
                           type="button"
-                          className="mb-4 inline-block font-medium hover:opacity-90"
+                          className="mb-4 md:mb-0 inline-block font-medium hover:opacity-90"
                         >
                           {link.title}
                         </button>
@@ -86,7 +86,7 @@ const Footer = () => {
       </div>
 
       <div className="w-full text-center mb-8 mt-4 md:mt-0">
-        <span className="p-8">All rights reserved © Rosana Bistro + Bar  |  Website by <Link href="https://www.talkagency.com.au/" target="_blank">TALK Agency</Link></span>
+        <span className="p-8 md:p-0">All rights reserved © Rosana Bistro + Bar  |  Website by <Link href="https://www.talkagency.com.au/" target="_blank">TALK Agency</Link></span>
       </div>
     </footer>
   )

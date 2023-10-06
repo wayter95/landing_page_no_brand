@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const Drink = () => {
   return (
-    <section id="eat" className="">
+    <section id="drinks" className="">
       <div className="grid md:grid-rows-none md:grid-cols-2 gap-y-4 md:gap-y-0">
         <div className="flex w-full max-w-[90%] md:max-w-[60%] mx-auto h-full flex-col justify-center gap-4 py-8 mt-8 md:mt-0 md:py-20">
           <Heading text="DRINK" />
