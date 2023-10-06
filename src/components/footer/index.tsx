@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image"
 import Link from "next/link"
+import { Link as Scroll } from "react-scroll";
 
 const footerItems = [
   {
@@ -8,11 +11,11 @@ const footerItems = [
     items: [
       {
         title: "Facebook",
-        path: "/",
+        path: "https://facebook.com/",
       },
       {
         title: "Instagram",
-        path: "/",
+        path: "https://instagram.com/",
       },
     ],
   },
@@ -26,7 +29,7 @@ const footerItems = [
       },
       {
         title: "Drink",
-        path: "drink",
+        path: "drinks",
       },
       {
         title: "Functions",
@@ -45,17 +48,19 @@ const Footer = () => {
     <footer className="w-full text-rsn-green-600 mt-12 md:mt-0">
       <div className="flex flex-col md:flex-row gap-4 w-full justify-around max-w-[80%] mx-auto md:p-20">
         <div className="w-full">
-          <Image
-            src="/images/logo-footer.png"
-            alt="rosana"
-            width={210}
-            height={72}
-            className="pointer-events-none"
-          />
+          <Link href="/" className="cursor-pointer">
+            <Image
+              src="/images/logo-footer.png"
+              alt="rosana"
+              width={210}
+              height={72}
+              className="pointer-events-none"
+            />
+          </Link>
         </div>
         <div className="w-full flex flex-col gap-4 mt-8 md:mt-0">
           <span className="text-lg">WHERE</span>
-          <Link href="/" target="_blank" className="text-lg mt-4">
+          <Link href="https://maps.app.goo.gl/ichbCK7aY19Pteau5" target="_blank" className="text-lg mt-4">
             <p className="md:w-[60%]">Level 8,  Holiday Inn Werribee 22 Synnot St, Werribee VIC 3030</p>
           </Link>
         </div>
@@ -69,12 +74,25 @@ const Footer = () => {
                   {
                     item.items.map((link) => (
                       <li key={link.title} >
-                        <button
-                          type="button"
-                          className="mb-4 md:mb-0 inline-block font-medium hover:opacity-90"
-                        >
-                          {link.title}
-                        </button>
+                        {
+                          item.title !== 'SOCIAL' ?
+                            <Scroll to={link.path} smooth offset={-100}>
+                              <button
+                                type="button"
+                                className="mb-4 md:mb-0 inline-block font-medium hover:opacity-90"
+                              >
+                                {link.title}
+                              </button>
+                            </Scroll> :
+                            <Link href={link.path} target="_blank">
+                              <button
+                                type="button"
+                                className="mb-4 md:mb-0 inline-block font-medium hover:opacity-90"
+                              >
+                                {link.title}
+                              </button>
+                            </Link>
+                        }
                       </li>
                     ))
                   }

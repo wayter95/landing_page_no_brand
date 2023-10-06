@@ -1,6 +1,9 @@
+"use client";
+
+import Image from "next/image"
 import { Button } from "@/components/button"
 import { Heading } from "@/components/heading"
-import Image from "next/image"
+import { Link as Scroll } from "react-scroll";
 
 const BookFunctions = () => {
   return (
@@ -28,7 +31,9 @@ const BookFunctions = () => {
           </div>
 
           <div className="w-[60%] md:w-[50%] mt-8">
+            <Scroll to="contact" smooth offset={-100}>
             <Button title="BOOK FUNCTION" variant="tertiary" />
+            </Scroll>
           </div>
         </div>
 
