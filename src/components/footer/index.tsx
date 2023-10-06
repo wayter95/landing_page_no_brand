@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
         <div className="w-full flex flex-col gap-4 mt-8 md:mt-0">
           <span className="text-lg">WHERE</span>
-          <Link href="https://maps.app.goo.gl/ichbCK7aY19Pteau5" target="_blank" className="text-lg mt-4">
+          <Link href="https://maps.app.goo.gl/bSK2ZFh92ec2WB3w9" target="_blank" className="text-lg mt-4">
             <p className="md:w-[60%]">Level 8,  Holiday Inn Werribee 22 Synnot St, Werribee VIC 3030</p>
           </Link>
         </div>
