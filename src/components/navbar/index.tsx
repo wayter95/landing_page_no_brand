@@ -54,14 +54,6 @@ const Navbar = () => {
     setMenuActive(!menuActive);
   };
 
-  const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-
   useEffect(() => {
     const handleStickyNavbar = () => {
       setSticky(window.scrollY >= 80);
@@ -75,7 +67,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`z-10 w-full fixed ${menuActive && "active bg-rsn-orange-600 lg:bg-rsn-green-600"} ${sticky && "bg-rsn-green-600 fixed shadow-md"}`}>
+    <header className={`z-10 w-full fixed ${menuActive && "active lg:bg-rsn-green-600"} ${sticky && "bg-rsn-green-600 fixed shadow-md"}`}>
+      <div className={`bg-animated bg-rsn-orange-600 ${menuActive ? "active" : ""}`}></div>
       <nav className={`flex w-full max-w-[80%] mx-auto py-4 justify-between gap-8 items-center ${menuActive ? '' : ''}`}>
         <div className={`${menuActive ? "hidden lg:block" : ""}`}>
           <Scroll to="hero" className="cursor-pointer" smooth>
@@ -89,13 +82,13 @@ const Navbar = () => {
           </Scroll>
         </div>
 
-        <button className={`btn-menu flex flex-col justify-center items-center lg:hidden z-20 ${menuActive ? 'active absolute top-[5%] right-[10%]' : ''}`} onClick={() => toggleMenu()}>
+        <button className={`btn-menu z-[102] flex flex-col justify-center items-center lg:hidden ${menuActive ? 'active absolute top-[5%] right-[10%]' : ''}`} onClick={() => toggleMenu()}>
           <div className=""></div>
           <div className=""></div>
           <div className=""></div>
         </button>
 
-        <ul className={`relative flex lg:items-center w-full md:w-fit gap-8 flex-col overflow-hidden h-screen lg:h-full lg:flex-row transition-all duration-300 ${menuActive ? "max-h-screen flex pt-[30%] lg:pt-0" : "max-h-0 lg:max-h-full hidden lg:flex"}`}>
+        <ul className={`relative z-[101] flex lg:items-center w-full md:w-fit gap-8 flex-col overflow-hidden h-screen lg:h-full lg:flex-row transition-all duration-300 ${menuActive ? "max-h-screen flex pt-[30%] lg:pt-0" : "max-h-0 lg:max-h-full hidden lg:flex"}`}>
           <NavbarItems data={navbarItems} onClose={toggleMenu} />
           {
             menuActive &&

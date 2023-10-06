@@ -86,3 +86,20 @@ body {
 .nav-list-inactive {
   clip-path: circle(100px at 90% -20%);
 }
+
+.bg-animated {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  clip-path: circle(100px at 90% -20%);
+  transition: 0.5s ease-out;
+  z-index: 100;
+}
+
+
+.bg-animated.active {
+  clip-path: circle(1500px at 90% -20%);
+  pointer-events: all;
+}
