@@ -49,9 +49,11 @@ const socialItem = [
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
 
   useEffect(() => {
+    setWindowWidth(window.innerWidth); // <-- adicione esta linha
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
@@ -61,7 +63,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+}, []);
 
   const shouldShowActive = menuActive && windowWidth < 1024;
 
