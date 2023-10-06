@@ -49,6 +49,21 @@ const socialItem = [
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const shouldShowActive = menuActive && windowWidth < 1024;
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
@@ -68,7 +83,7 @@ const Navbar = () => {
 
   return (
     <header className={`z-10 w-full fixed ${menuActive && "active lg:bg-rsn-green-600"} ${sticky && "bg-rsn-green-600 fixed shadow-md"}`}>
-      <div className={`bg-animated bg-rsn-orange-600 ${menuActive ? "active" : ""}`}></div>
+      <div className={`bg-animated bg-rsn-orange-600 ${shouldShowActive ? "active" : ""}`}></div>
       <nav className={`flex w-full max-w-[80%] mx-auto py-4 justify-between gap-8 items-center ${menuActive ? '' : ''}`}>
         <div className={`${menuActive ? "hidden lg:block" : ""}`}>
           <Scroll to="hero" className="cursor-pointer" smooth>
